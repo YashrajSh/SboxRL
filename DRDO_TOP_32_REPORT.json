@@ -1,0 +1,514 @@
+[
+    {
+        "filename": "sbox_nl102_core6_8.json",
+        "rules": [
+            242,
+            10,
+            142,
+            223,
+            16,
+            151,
+            29,
+            70
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core1_12.json",
+        "rules": [
+            131,
+            215,
+            206,
+            93,
+            61,
+            91,
+            111,
+            227
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core4_9.json",
+        "rules": [
+            54,
+            199,
+            2,
+            135,
+            191,
+            178,
+            158,
+            235
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core6_4.json",
+        "rules": [
+            79,
+            194,
+            167,
+            100,
+            154,
+            253,
+            145,
+            153
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core2_3.json",
+        "rules": [
+            143,
+            199,
+            30,
+            94,
+            253,
+            206,
+            22,
+            237
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core8_12.json",
+        "rules": [
+            83,
+            154,
+            103,
+            216,
+            118,
+            81,
+            124,
+            137
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core3_7.json",
+        "rules": [
+            172,
+            245,
+            136,
+            90,
+            250,
+            141,
+            99,
+            59
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core9_1.json",
+        "rules": [
+            215,
+            143,
+            211,
+            3,
+            174,
+            101,
+            54,
+            152
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core8_5.json",
+        "rules": [
+            89,
+            248,
+            241,
+            251,
+            137,
+            19,
+            189,
+            198
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core9_12.json",
+        "rules": [
+            203,
+            1,
+            81,
+            244,
+            72,
+            142,
+            57,
+            244
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core6_9.json",
+        "rules": [
+            70,
+            135,
+            253,
+            46,
+            226,
+            69,
+            120,
+            240
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core7_6.json",
+        "rules": [
+            74,
+            253,
+            116,
+            252,
+            149,
+            190,
+            10,
+            81
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core5_7.json",
+        "rules": [
+            215,
+            253,
+            83,
+            160,
+            241,
+            62,
+            246,
+            141
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core2_12.json",
+        "rules": [
+            37,
+            46,
+            21,
+            71,
+            244,
+            12,
+            5,
+            35
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core5_16.json",
+        "rules": [
+            32,
+            40,
+            153,
+            131,
+            33,
+            47,
+            234,
+            161
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core0_15.json",
+        "rules": [
+            170,
+            21,
+            109,
+            115,
+            103,
+            237,
+            135,
+            194
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core0_9.json",
+        "rules": [
+            227,
+            215,
+            19,
+            171,
+            22,
+            223,
+            12,
+            63
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core8_2.json",
+        "rules": [
+            138,
+            255,
+            89,
+            241,
+            133,
+            133,
+            227,
+            96
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core5_6.json",
+        "rules": [
+            232,
+            104,
+            106,
+            183,
+            122,
+            20,
+            97,
+            146
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core9_6.json",
+        "rules": [
+            49,
+            243,
+            185,
+            92,
+            91,
+            89,
+            107,
+            245
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core8_15.json",
+        "rules": [
+            10,
+            175,
+            9,
+            76,
+            128,
+            80,
+            19,
+            141
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core2_4.json",
+        "rules": [
+            98,
+            187,
+            21,
+            134,
+            207,
+            6,
+            162,
+            107
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core6_3.json",
+        "rules": [
+            32,
+            137,
+            156,
+            194,
+            246,
+            66,
+            75,
+            131
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core1_2.json",
+        "rules": [
+            156,
+            240,
+            60,
+            205,
+            0,
+            1,
+            41,
+            201
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core2_10.json",
+        "rules": [
+            160,
+            165,
+            196,
+            203,
+            201,
+            209,
+            97,
+            212
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core6_12.json",
+        "rules": [
+            80,
+            109,
+            202,
+            45,
+            199,
+            230,
+            247,
+            86
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core6_13.json",
+        "rules": [
+            180,
+            217,
+            69,
+            39,
+            217,
+            154,
+            212,
+            173
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core2_11.json",
+        "rules": [
+            217,
+            124,
+            17,
+            113,
+            239,
+            231,
+            64,
+            181
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core3_10.json",
+        "rules": [
+            80,
+            124,
+            140,
+            164,
+            214,
+            31,
+            117,
+            118
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core6_1.json",
+        "rules": [
+            193,
+            61,
+            207,
+            39,
+            220,
+            24,
+            3,
+            87
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core0_11.json",
+        "rules": [
+            223,
+            100,
+            207,
+            219,
+            159,
+            162,
+            200,
+            127
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    },
+    {
+        "filename": "sbox_nl102_core8_10.json",
+        "rules": [
+            37,
+            184,
+            220,
+            63,
+            248,
+            118,
+            108,
+            33
+        ],
+        "nl": 102,
+        "du": 8,
+        "bijective": true
+    }
+]

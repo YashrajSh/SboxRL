@@ -4,32 +4,35 @@ class HybridCAEngine:
     def __init__(self, n=8):
         self.n = n
 
-    def apply_hybrid_rule(self, state, rules):
+    def apply_hybrid_first_order(self, state, rules):
+        """
+        Calculates the next 8-bit state.
+        Each bit i is updated using its own rule[i].
+        """
         new_state = 0
         for i in range(self.n):
-            left  = (state >> ((i - 1) % self.n)) & 1
-            mid   = (state >> i) & 1
-            right = (state >> ((i + 1) % self.n)) & 1
-            idx = (left << 2) | (mid << 1) | right
-            bit_out = (rules[i] >> idx) & 1
-            new_state |= (bit_out << i)
+            # 3-neighborhood: (Left, Self, Right)
+            idx = ((state >> ((i - 1) % self.n)) & 1) << 2 | \
+                  ((state >> i) & 1) << 1 | \
+                  ((state >> ((i + 1) % self.n)) & 1)
+            # The i-th rule from the vector decides the i-th bit
+            new_state |= ((rules[i] >> idx) & 1) << i
         return new_state
 
-    def generate_sbox(self, rules, seed=0x01):
-        prev, curr = 0x00, seed
+    def get_orbit(self, rules, seed=0x01):
+        """
+        Generates a trajectory of 256 states.
+        Returns: (list of states, unique_count)
+        """
+        curr = seed
         trajectory = []
-        visited_pairs = set()
+        unique_states = set()
         
         for _ in range(256):
-                                                               
-            state_pair = (curr << 8) | prev
-            if state_pair in visited_pairs:
+            if curr in unique_states:
                 break
-            visited_pairs.add(state_pair)
-            
+            unique_states.add(curr)
             trajectory.append(curr)
-            f_out = self.apply_hybrid_rule(curr, rules)
-            nxt = f_out ^ prev
-            prev, curr = curr, nxt
+            curr = self.apply_hybrid_first_order(curr, rules)
             
-        return trajectory, len(set(trajectory))
+        return trajectory, len(unique_states)
