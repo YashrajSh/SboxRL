@@ -2,37 +2,46 @@ import numpy as np
 
 class HybridCAEngine:
     def __init__(self, n=8):
-        self.n = n
+        self.n = n # Total bits (8)
 
-    def apply_hybrid_first_order(self, state, rules):
-        """
-        Calculates the next 8-bit state.
-        Each bit i is updated using its own rule[i].
-        """
-        new_state = 0
-        for i in range(self.n):
-            # 3-neighborhood: (Left, Self, Right)
-            idx = ((state >> ((i - 1) % self.n)) & 1) << 2 | \
-                  ((state >> i) & 1) << 1 | \
-                  ((state >> ((i + 1) % self.n)) & 1)
-            # The i-th rule from the vector decides the i-th bit
-            new_state |= ((rules[i] >> idx) & 1) << i
-        return new_state
+    def F_function(self, nibble, rules):
+        """4-bit Hybrid CA Round Function"""
+        nxt = 0
+        for i in range(4):
+            # 3-neighborhood on 4 bits
+            idx = ((nibble >> ((i + 1) % 4)) & 1) << 2 | \
+                  ((nibble >> i) & 1) << 1 | \
+                  ((nibble >> ((i - 1) % 4)) & 1)
+            if (rules[i] >> idx) & 1:
+                nxt |= (1 << i)
+        return nxt
 
-    def get_orbit(self, rules, seed=0x01):
+    def generate_sbox(self, rules_8):
         """
-        Generates a trajectory of 256 states.
-        Returns: (list of states, unique_count)
+        4-Round Feistel Network.
+        Bijective by construction. One-shot execution.
         """
-        curr = seed
-        trajectory = []
-        unique_states = set()
-        
-        for _ in range(256):
-            if curr in unique_states:
-                break
-            unique_states.add(curr)
-            trajectory.append(curr)
-            curr = self.apply_hybrid_first_order(curr, rules)
+        sbox = np.zeros(256, dtype=np.int32)
+        # We split the 8 rules provided by RL into two sets for the rounds
+        rules_set_A = rules_8[0:4]
+        rules_set_B = rules_8[4:8]
+
+        for x in range(256):
+            L = (x >> 4) & 0x0F
+            R = x & 0x0F
             
-        return trajectory, len(unique_states)
+            # Round 1
+            f1 = self.F_function(R, rules_set_A)
+            L, R = R, f1 ^ L
+            # Round 2
+            f2 = self.F_function(R, rules_set_B)
+            L, R = R, f2 ^ L
+            # Round 3
+            f3 = self.F_function(R, rules_set_A)
+            L, R = R, f3 ^ L
+            # Round 4
+            f4 = self.F_function(R, rules_set_B)
+            L, R = R, f4 ^ L
+            
+            sbox[x] = (L << 4) | R
+        return sbox
